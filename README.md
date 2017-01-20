@@ -18,3 +18,5 @@ Needs to be documented if employee did not log overtime
 UI:
 
 Bootstrap -> formatting
+
+##refactor user assciation in post_spec.rb
