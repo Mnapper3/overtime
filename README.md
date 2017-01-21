@@ -17,6 +17,6 @@ Email summary to managers for approval
 Needs to be documented if employee did not log overtime
 UI:
 
-Bootstrap -> formatting
+x Bootstrap -> formatting
 
 ##refactor user assciation in post_spec.rb
