@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-    before_action :set_posts, only: [:show]
+    before_action :set_posts, only: [:show, :edit, :update]
     
     def index
         @posts = Post.all
@@ -7,6 +7,18 @@ class PostsController < ApplicationController
     
      def new
          @post = Post.new
+     end
+     
+     def edit
+     end
+     
+     def update
+        if @post.update(post_params)
+            # if saved redirect to our show page, post_path(@post)
+            redirect_to post_path(@post), notice: 'Post was successfully edited.'
+        else
+            render 'edit'
+        end
      end
      
      def create
