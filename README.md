@@ -18,4 +18,6 @@ Features:
 UI:
 x Bootstrap -> formatting
 
-##refactor user assciation in post_spec.rb
+-refactor user assciation in post_spec.rb
+- refactor posts/_form for admin user w/ status
+- Fix Spec/Features/Post_spec.rb:82 to use factories
