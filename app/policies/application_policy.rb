@@ -29,6 +29,10 @@ class ApplicationPolicy
   def edit?
     update?
   end
+  
+  def admin_types
+    ['AdminUser']
+  end
 
   def destroy?
     false

@@ -10,9 +10,11 @@ class PostsController < ApplicationController
      end
      
      def edit
+        authorize @post
      end
      
      def update
+        authorize @post
         if @post.update(post_params)
             # if saved redirect to our show page, post_path(@post)
             redirect_to post_path(@post), notice: 'Post was successfully edited.'
