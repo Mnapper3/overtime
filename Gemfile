@@ -12,6 +12,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem "gritter", "1.2.0"
 gem "administrate", "~> 0.2.2"
 gem 'bourbon'
+gem 'pundit', '1.1'
 
 
 group :development, :test do

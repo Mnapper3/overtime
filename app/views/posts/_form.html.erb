@@ -17,6 +17,9 @@
   <%= f.text_area :rationale,class: "form-control" %>
 </div>
   
+  <!--if user is an AdminUser diplay _status file-->
+  <%= render partial: 'status', locals: {f: f} if current_user.type == 'AdminUser' %>
+  
   <%= f.submit "Save", class: "btn btn-primary btn-block" %>
 
 <% end %>
