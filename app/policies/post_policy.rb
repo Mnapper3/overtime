@@ -1,8 +1,22 @@
 class PostPolicy < ApplicationPolicy
   
   def update?
-    # post creater or  #admin user
-    record.user_id == user.id || admin_types.include?(user.type)
+    return true if post_approval? && admin?
+    return true if user_or_admin && !post_approval?
   end
+  
+  private
+  
+    def user_or_admin
+      record.user_id == user.id || admin?
+    end
+    
+    def admin?
+      admin_types.include?(user.type)
+    end
+    
+    def post_approval?
+      record.approved?
+    end
   
 end

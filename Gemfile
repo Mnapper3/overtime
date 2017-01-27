@@ -15,12 +15,14 @@ gem 'bourbon'
 gem 'pundit', '1.1'
 
 
+
 group :development, :test do
   gem 'byebug'
   gem 'rspec-rails', '~> 3.0'
   gem 'capybara'
   gem 'database_cleaner'
   gem 'factory_girl_rails', '~> 4.7'
+  gem 'puma', '3.4'
 end
 
 group :development do
