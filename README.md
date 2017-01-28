@@ -6,6 +6,7 @@ Models
 x  Post -> date:date rationale:text 
 x User -> Devise 
 x AdminUser -> STI
+- Audit_log
 
 Features:
 -Approval Workflow
@@ -19,4 +20,4 @@ UI:
 x Bootstrap -> formatting
 
 
-- refactor posts/_form for admin user w/ status
+x refactor posts/_form for admin user w/ status
