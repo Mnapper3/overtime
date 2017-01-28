@@ -32,13 +32,18 @@ describe 'navigate' do
     end
     
     # other_user is created and creates a post, but user1 is signed in so you shouldn't see other_user's post
-    it 'has a scope that only post creater can see their post' do
-      other_user = FactoryGirl.create(:other_user)
-      post_from_other_user = Post.create(date: Date.today, rationale: "this post shouldn't be seen", user_id: other_user.id, overtime_request: 3.5)
-      
+     it 'has a scope so that only post creators can see their posts' do
+      other_user = User.create(first_name: 'Non', 
+                              last_name: 'Authorized', 
+                              email: "nonauth@example.com", 
+                              password: "asdfasdf", 
+                              password_confirmation: "asdfasdf", 
+                              phone: "5555555555")
+      post_from_other_user = Post.create(date: Date.today, rationale: "This post shouldn't be seen", user_id: other_user.id, overtime_request: 3.5)
+
       visit posts_path
-      # have_content uses /test/ = "test"
-      expect(page).to_not have_content(/this post shouldn't be seen/)
+
+      expect(page).to_not have_content(/This post shouldn't be seen/)
     end
   end
 
