@@ -11,14 +11,20 @@
 			<%= link_to "Time Entry's", posts_path %>
 		</li>
 		<li class="<%= active?(new_post_path) %>">
-			<%= link_to "Add new Entry", new_post_path, id: "new_post_from_nav" %>
+			<%= link_to "Add new Entry", new_post_path %>
 		</li>
+		<!--if user is an AdminUser diplay audit logs in navbar -->
+		<% if policy(AuditLog).index? %>
+			<li class="<%= active?(audit_logs_path) %>">
+				<%= link_to "Audit Log", audit_logs_path, id: "new_post_from_nav" %>
+			</li>
+		<% end %>
 		<li class="dropdown pull-right">
 			 <a href="#" data-toggle="dropdown" class="dropdown-toggle">Options<strong class="caret"></strong></a>
 			<ul class="dropdown-menu">
 			
 			<!--if user is an AdminUser diplay _status file-->
-	  	<% if current_user.try(:type) == 'AdminUser' %>
+	  		<% if policy(AuditLog).index? %>
 				<li>
 				    <%= link_to "TODO: Admin Dashboard", admin_root_path %>
 				</li>
