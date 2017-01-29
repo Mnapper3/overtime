@@ -8,8 +8,6 @@ namespace :notification do
     # User.all.each do |user|
     #   SmsTool.send_sms()
     # end  
-    
-    #number is limited toi 10 ^ no dashes , no abc's
   end
 
 end

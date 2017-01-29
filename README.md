@@ -9,12 +9,12 @@ x AdminUser -> STI
 - Audit_log
 
 Features:
--Approval Workflow
--SMS Sending -> link to approval or overtime input
--Administrate admin dashboard
--Email summary to managers for approval
--Needs to be documented if employee did not log overtime
--block none admin and guest users in admin
+- Approval Workflow
+- SMS Sending -> link to approval or overtime input, inagrate with heroku scheduling
+x Administrate admin dashboard
+- Email summary to managers for approval
+- Needs to be documented if employee did not log overtime
+x block none admin and guest users in admin
 
 UI:
 x Bootstrap -> formatting
