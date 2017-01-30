@@ -1,4 +1,4 @@
-<h1>Audit Log</h1>
+<h1>Audit Log Dashboard</h1>
 
 <table class="table table-striped table-hover">
 	<thead>
@@ -25,7 +25,10 @@
 			</th>
 		</tr>
 	</thead>
-	<tbody>
+	 <tbody id="audit_logs">
 		<%= render @audit_logs %>
 	</tbody>
 </table>
+<div id="paginator">
+	<%= paginate @audit_logs, remote: true %>
+</div>
