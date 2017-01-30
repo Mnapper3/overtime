@@ -21,3 +21,8 @@
 .pending-details {
   font-weight: 900;
 }
+
+.home-block:hover {
+  background-color: #172b63;
+  
+  }

@@ -11,7 +11,7 @@
 			<%= link_to "Time Entry's", posts_path %>
 		</li>
 		<li class="<%= active?(new_post_path) %>">
-			<%= link_to "Add new Entry", new_post_path %>
+			<%= link_to "Add new Entry", new_post_path, id: "new_post_from_nav" %>
 		</li>
 		<!--if user is an AdminUser diplay audit logs in navbar -->
 		<% if policy(AuditLog).index? %>

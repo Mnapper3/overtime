@@ -5,6 +5,26 @@
     </h2>
     <hr>
    
-   <%= render partial: 'pending_approval', locals: { pending_approvals: @pending_approvals } %>
+   <%= render partial: 'pending_approval', locals: { pending_approvals: @pending_approvals } %>    
+</div>  <!--end of container-fluid-->   
+
+<div class="container-fluid">
+  <div class="pending-homepage row">   
+   <h2 class="text-center">
+      Confirmation Log
+   </h2>
+    <hr>
+    <%= render partial: 'confirmation_log', locals: { recent_audit_items: @recent_audit_items } %>
+    <hr>
+    
+    <div class="clearfix"></div>
+      
+      <!--just to center button with bootstrap-->
+      <div class="col-md-4 col-md-offset-5">
+        <%= link_to 'View All Items', audit_logs_path, class: "btn btn-primary" %>
+      </div>
+    
+</div>  <!--end of container-fluid-->    
    
-</div>  <!--end of container-fluid-->
+   
+   
