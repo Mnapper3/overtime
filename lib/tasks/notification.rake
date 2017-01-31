@@ -10,4 +10,19 @@ namespace :notification do
     # end  
   end
 
+  desc "Sends email notification to admin users each day to perform pending request"
+  task manager_email: :environment do
+    # iterate over the pending ot request 
+    # check if there are any ovetime request
+    # iterate over list of admin users
+    # email list to admins
+    submitted_posts = Post.submitted
+    admin_users = AdminUser.all
+    if submitted_posts.count > 0
+        admin_users.each do |admin|
+        ManagerMailer.email(admin).deliver_now
+        end
+    end
+  end
+
 end
