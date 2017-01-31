@@ -18,6 +18,7 @@ gem 'devise', '~> 4.2'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem 'dotenv-rails', :groups => [:development, :test]
 gem 'kaminari', '~> 0.17.0'
+gem 'rails_12factor'
 
 
 group :development, :test do
