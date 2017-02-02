@@ -1,17 +1,18 @@
- <% pending_approvals.each do |pending_approval| %>
-   <div class="home-block col-md-3 ">
-     <h4 class="text-center">
-       <%= pending_approval.user.full_name %>
-     </h4>
-     <p>
-       <span class="pending-details">Date Submitted:</span> <%= pending_approval.date %>
-     </p>
-     <p>
-       <span class="pending-details">Rationale:</span> <%= truncate pending_approval.rationale, length: 42 %>
-     </p>
-   
-   
-   <div class='row'>
+<% pending_approvals.each do |pending_approval| %>
+	<div class='homepage-block col-md-3'>
+		<h4>
+			<%= pending_approval.user.full_name %>
+		</h4>
+
+		<p>
+			<span class='pending-details'>Date Submitted:</span> <%= pending_approval.date %>
+		</p>
+
+		<p>
+			<span class='pending-details'>Rationale:</span> <%= truncate pending_approval.rationale, length: 42 %>
+		</p>
+
+		<div class='row'>
 			<div class='col-md-6 column'>
 				<%= link_to 'Approve', approve_post_path(pending_approval), class: 'btn btn-success btn-block', id: "approve_#{pending_approval.id}" %>
 			</div>
@@ -21,5 +22,3 @@
 		</div>
 	</div>
 <% end %>
-  
-  
