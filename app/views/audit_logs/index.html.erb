@@ -10,25 +10,23 @@
 				Employee
 			</th>
 			<th>
-				Starting Week
+				Week Starting
 			</th>
 			<th>
-				Confirmed Week
+				Confirmed At
 			</th>
 			<th>
 				Status
 			</th>
-			
-			<th>
-			</th>
-			<th>
-			</th>
+			<th></th>
+			<th></th>
 		</tr>
 	</thead>
-	 <tbody id="audit_logs">
+	<tbody id="audit_logs">
 		<%= render @audit_logs %>
 	</tbody>
 </table>
+
 <div id="paginator">
 	<%= paginate @audit_logs, remote: true %>
 </div>
