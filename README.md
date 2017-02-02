@@ -22,6 +22,7 @@ x block none admin and guest users in admin
 - fix admin dashboard bug
 - implement honeybadger for error reporting
 - implemnet relic for heroku slow reloads
+- 
 
 UI:
 x Bootstrap -> formatting
